@@ -1,4 +1,4 @@
-public class MatrixBasicMultiple {
+public class TwodArray {
 
 public static void main(String[] args) {
 	int firstMatrix[][] = { {1,2,3},{4,5,6},{7,8,9} };
@@ -11,8 +11,13 @@ public static void main(String[] args) {
 	for(row=0;row<multiple.length;row++)
 	{
 	for(column=0;column<multiple.length;column++)
-	{	        
-		multiple[row][column] = firstMatrix[row][column] * secondMatrix[row][column];
+	{	 
+		multiple[row][column]=0;
+
+		for(int i=0;i<multiple.length;i++)
+		{
+		multiple[row][column] += firstMatrix[row][i] * secondMatrix[i][column];
+		}
 	}
 	}
 
@@ -29,6 +34,6 @@ public static void main(String[] args) {
 }
 
 //OUTPUT
-1	4	9	
-16	25	36	
-49	64	81	
+30	36	42	
+66	81	96	
+102	126	150	
