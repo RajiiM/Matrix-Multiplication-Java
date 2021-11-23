@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MatrixMultiple {
+public class TwodArray {
 	
 	static Scanner sc = new Scanner(System.in);
 
@@ -40,7 +40,12 @@ public class MatrixMultiple {
 		{
 			for (int column = 0; column < multiple.length; column++) 
 			{
-				multiple[row][column] = array1[row][column] * array2[row][column];
+				multiple[row][column]=0;
+
+				for(int i=0;i<multiple.length;i++)
+				{
+				multiple[row][column] += array1[row][i] * array2[i][column];
+				}
 			}
 		}
 
@@ -58,17 +63,28 @@ public class MatrixMultiple {
 
 //OUTPUT
 Enter array size
-2
+3
 Enter array1 value
+1
 2
 3
 4
 5
+6
+7
+8
+9
 Enter array2 value
+1
 2
 3
 4
 5
+6
+7
+8
+9
 Multiplication of array1 & array2
-4   9
-16 25
+30	36	42	
+66	81	96	
+102	126	150	
